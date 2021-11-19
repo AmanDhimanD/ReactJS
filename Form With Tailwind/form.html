@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form </title>
+    </head>
+    <style>
+    *{
+        font-weight: bold;
+        }
+    .custom{
+        text-shadow: 5px 1px 2px  black;
+        color: white;
+        border: 2px solid blanchedalmond;
+        text-align: center;
+        padding: 20px;
+        margin-top: 90px;
+        background-color: chocolate;
+        font-size: xx-large;
+        
+    }
+    input{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    button{
+        font-size: large;
+        padding: 20px;
+        text-shadow: 5px 1px 2px  rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+    .below{
+        text-align: center;
+        padding-top: 20px;
+    }
+</style>
+    <body>
+        <div class="container mx-auto custom" id="custom">
+            <label for="name">Name</label> <br>
+            <input type="name" placeholder="Enter your name"><br>
+            <label for="email">Email</label><br>
+            <input type="email" placeholder="Enter your email"><br>
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="Enter your password"><br> <br>
+            <button type="submit" id="submit" onclick="reset()">Submit</button><br>
+            <div class="below">
+            <button onclick="sum(1,2)">Add</button>
+            <button onclick="font()">Font</button>
+            <button onclick="setBg()">Set Color</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        </div>
+        
+
+    </body>
+    <script>
+    sum=(a,b)=>{
+        alert(a+b)
+    }
+    font=()=>{
+        document.getElementById("custom").style.fontStyle= "italic";
+    }
+   
+    const setBg = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+    } 
+
+    reset=()=>{
+        location.reload()
+    }
+
+
+</script>
+</html>
